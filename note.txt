@@ -1,0 +1,11 @@
+1.使用git init来初始化Git仓库
+2.添加文件到仓库，共分两步：
+	1）git add <file ...> 可同时添加多个文件，中间由空格分割
+	2）git commit -m <message> 提交，message部分注释更改内容
+
+要随时掌握工作区状态，使用git status命令
+如果git status显示有文件被修改过，可以使用git diff查看修改内容
+
+HEAD指向当前版本，因此Git允许版本之间穿梭，使用命令git reset --hard commit_id
+git log可以查看提交历史，以便确定回退到过去哪个版本
+git reflog可以查看命令历史，以便确定回到未来哪个版本
