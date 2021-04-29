@@ -1,3 +1,5 @@
+for more information, visit https://www.liaoxuefeng.com/wiki/896043488029600
+
 1.使用git init来初始化Git仓库
 2.添加文件到仓库，共分两步：
 	1）git add <file ...> 可同时添加多个文件，中间由空格分割
@@ -6,6 +8,13 @@
 要随时掌握工作区状态，使用git status命令
 如果git status显示有文件被修改过，可以使用git diff查看修改内容
 
-HEAD指向当前版本，因此Git允许版本之间穿梭，使用命令git reset --hard commit_id
+HEAD指向当前版本，因此Git允许版本之间穿梭，使用命令git reset --hard <commit_id>
 git log可以查看提交历史，以便确定回退到过去哪个版本
 git reflog可以查看命令历史，以便确定回到未来哪个版本
+
+暂存区和工作区：
+	工作区是在本地可以看到的目录，比如当前的learngit
+	暂存区临时保存本地的修改，当所有修改提交后，暂存区将会清空，如隐藏的.git
+
+每次修改后只有add到缓存区之后commit才会被记录，否则修改将不会被提交
+可以使用命令git diff HEAD -- <file> 来查看工作区与版本库里最新版本的区别
