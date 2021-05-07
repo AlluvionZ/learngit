@@ -18,3 +18,8 @@ git reflog可以查看命令历史，以便确定回到未来哪个版本
 
 每次修改后只有add到缓存区之后commit才会被记录，否则修改将不会被提交
 可以使用命令git diff HEAD -- <file> 来查看工作区与版本库里最新版本的区别
+
+git checkout -- <file> 可以丢弃工作区的更改
+git reset HEAD <file> 将添加到暂存区的文件进行丢弃，然后根据git checkout -- <file> 彻底丢弃修改
+
+
