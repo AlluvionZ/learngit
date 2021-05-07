@@ -29,4 +29,25 @@ rm <file> 将本地的文件删除，之后git rm <file> 或git add <file> 将�
 ssh-keygen -t rsa -C "youremail@example.com"可以生成一个RSA密钥对用于远程连接？？
 将rsa.pub内容添加到Github，之后可以用于验证身份？？
 
+git remote add origin git@github.com:USERNAME/PROJECKNAME 关联GitHub中的远程库
+git push -u origin master把本地库的内容推送到远程，用git push命令，实际上是把当前分支master推送到远程。由于远程库是空的，我们第一次推送master分支时，加上了-u参数
+Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令为git push origin master
+
+用ssh-keygen命令新建密钥时，若采用了自定义的名称(github_rsa)，需要配置一个config文件：
+	cd ~/.ssh/
+	vi config
+		Host github.com
+		 HostName github.com
+		 User git
+		 IdentityFile ~/.ssh/github_ssa(密钥的路径)
+	ssh -T git@github.com
+
+git clone git@github.com:USERNAME/PROJECTNAME 克隆远程库到本地
+
+git checkout -b dev 创建并切换到'dev'分支，等价于$git branch dev  +  $git checkout dev
+git branch 查看当前分支
+git merge dev 将'dev'分支的工作与当前的分支('master')合并
+git branch -d dev 将'dev'分支删除
+也可以用switch来代替checkout命令来进行分支切换，增删
+
 
