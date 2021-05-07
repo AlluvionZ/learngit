@@ -22,4 +22,11 @@ git reflog可以查看命令历史，以便确定回到未来哪个版本
 git checkout -- <file> 可以丢弃工作区的更改
 git reset HEAD <file> 将添加到暂存区的文件进行丢弃，然后根据git checkout -- <file> 彻底丢弃修改
 
+rm <file> 将本地的文件删除，之后git rm <file> 或git add <file> 将文件从版本库中删除
+若是误删，可以用git checkout -- <file> 恢复
+注意用git commit 提交修改
+
+ssh-keygen -t rsa -C "youremail@example.com"可以生成一个RSA密钥对用于远程连接？？
+将rsa.pub内容添加到Github，之后可以用于验证身份？？
+
 
