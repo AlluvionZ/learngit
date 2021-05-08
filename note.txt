@@ -50,4 +50,5 @@ git merge dev 将'dev'分支的工作与当前的分支('master')合并
 git branch -d dev 将'dev'分支删除
 也可以用switch来代替checkout命令来进行分支切换，增删
 
-
+不同分支相同文件出现冲突时无法合并，需要手动进行修改，git status会在源文件中标记出冲突位置
+git log --graph --pretty=oneline --abbrev-commit可以看到分支合并情况
