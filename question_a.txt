@@ -1,0 +1,11 @@
+https://blog.csdn.net/wq6ylg08/article/details/88761581
+
+1.问题描述：windows平台下使用git add，git deploy 文件时经常出现“warning: LF will be replaced by CRLF” 的提示
+
+2.问题原因：不同操作系统的参与者进行合作项目
+
+3.解决方法：git config core.autocrlf查询结果是否true, 若不是config --global core.autocrlf true可设置为true.
+以上操作的功能：(A)在“把 modified修改过的文件git add到暂存区stage”时，Git自动把LF转换成CRLF,并给出那条警告”LF will be replaced by CRLF”
+(B)在“把modified修改过的文件由暂存区(stage) 提交(commit)到版本库/仓库(repository)”时，Git自动把CRLF转换成LF
+(C)在“用 检出/git checkout切换到指定分支 或 git clone克隆远程版本库”来加载代码时，Git自动把LF转换成CRLF
+
